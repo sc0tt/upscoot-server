@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+
+{% block content %}
+    <form action="{{ url_for('home.upload') }}" method="POST" enctype="multipart/form-data" name="upload_form">
+        {{ form.csrf_token }}<br/>
+        {{ form.file }}<br/>
+        {{ form.url(autocomplete=False) }}<br/>
+        {{ form.password }}<br/>
+        {{ form.private }}<br/>
+        <input type="submit" value="Upload">
+    </form>
+{% endblock %}
