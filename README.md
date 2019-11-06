@@ -2,6 +2,8 @@
 
 Upscoot is a service to upload images. I use this to upload my own files to share with other people.
 
+This repository is the backend of the service. It is currently written in Python using Flask.
+
 #### The planned features are (In order of priority):
 
  * Upload by File or URL
@@ -19,3 +21,5 @@ I intend to also open source the android application once the server is function
  
 The current implementation of Upscoot supports most of these things in a very primitive way. This project is an attempt
 at creating a more reliable, testable, and reusable website. 
+
+[View on Github](https://github.com/sc0tt/upscoot-server)
