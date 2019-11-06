@@ -18,4 +18,4 @@ Upscoot is a service to upload images. I use this to upload my own files to shar
 I intend to also open source the android application once the server is functional. 
  
 The current implementation of Upscoot supports most of these things in a very primitive way. This project is an attempt
-at creating a more reliable, testable, and re-usable website. 
+at creating a more reliable, testable, and reusable website. 
