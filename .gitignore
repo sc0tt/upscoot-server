@@ -209,5 +209,4 @@ dmypy.json
 .pyre/
 
 # Upscoot-server files
-config.py
 uploads/
