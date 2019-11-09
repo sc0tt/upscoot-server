@@ -20,6 +20,15 @@ def create_app(test_config: dict = None):
     except OSError:
         pass
 
+    upload_path = os.path.join(app.instance_path, app.config["UPLOAD_FOLDER"])
+
+    try:
+        os.makedirs(upload_path)
+    except OSError:
+        pass
+
+    app.config.update(UPLOAD_PATH=upload_path)
+
     try:
         os.makedirs("uploads")
     except OSError:

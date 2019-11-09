@@ -1,2 +1,4 @@
 DEBUG = True
 SECRET_KEY = "dev"
+UPLOAD_PASSWORD = ""
+UPLOAD_FOLDER = "uploads"
