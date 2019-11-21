@@ -1,6 +1,6 @@
 # Upscoot
 
-Upscoot is a services. I use this to put my own things.
+Upscoot is a service. I use this to put my own things.
 
 This repository is the backend of the service. It is currently written in Python using Flask.
 
