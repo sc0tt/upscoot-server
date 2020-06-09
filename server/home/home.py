@@ -12,7 +12,6 @@ from .forms import UploadForm
 
 blueprint = Blueprint("home", __name__)
 
-
 @blueprint.route("/")
 def index():
     form = UploadForm()
@@ -88,9 +87,6 @@ def upload():
                 else:
                     # TODO: Flash error
                     return redirect(url_for('home.index'))
-
-                # Create new filename, this will need validation at some point so there are no dupes.
-                pass
 
             return redirect(url_for('home.index'))
 
