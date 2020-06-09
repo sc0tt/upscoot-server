@@ -5,10 +5,16 @@ import os
 from werkzeug.utils import secure_filename
 
 ALLOWED_EXTENSIONS = [
-    ".jpg", ".jpeg",
-    ".png",
-    ".gif",
-    ".mp4",
+    # Images
+    ".jpg", ".jpeg", ".svg", ".png", ".gif",
+    # Videos
+    ".mp4", ".avi", ".webm", ".webp", ".mov",
+    # Audio
+    ".ogg", ".mp3", ".wav",
+    # Documents
+    ".txt", ".docx", ".xlsx", ".csv", ".pdf",
+    # Archives
+    ".7z", ".zip", ".tar.gz", ".tar", ".gz", ".rar"
 ]
 
 
