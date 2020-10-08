@@ -36,11 +36,17 @@ def create_app(test_config: dict = None):
     except OSError:
         pass
 
-    load_blueprints(api)
+    load_blueprints(app)
+    load_apis(api)
 
     return app
 
 
-def load_blueprints(api: Api):
+def load_blueprints(app: Flask):
+    from .home import home_blueprint
+    app.register_blueprint(home_blueprint)
+
+
+def load_apis(api: Api):
     from .main import upload_resource
     api.add_resource(upload_resource, "/upload")

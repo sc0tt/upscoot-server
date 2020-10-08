@@ -210,3 +210,4 @@ dmypy.json
 
 # Upscoot-server files
 uploads/
+/testdata/
