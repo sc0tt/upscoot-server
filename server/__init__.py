@@ -1,10 +1,12 @@
 import os
 
 from flask import Flask
+from flask_restful import Api
 
 
 def create_app(test_config: dict = None):
     app = Flask(__name__, instance_relative_config=True)
+    api = Api(app)
     app.config.from_mapping(
         DATABASE=os.path.join(app.instance_path, 'upscoot.sqlite')  # This will move to config file eventually.
     )
@@ -35,6 +37,7 @@ def create_app(test_config: dict = None):
         pass
 
     load_blueprints(app)
+    load_apis(api)
 
     return app
 
@@ -42,3 +45,8 @@ def create_app(test_config: dict = None):
 def load_blueprints(app: Flask):
     from .home import home_blueprint
     app.register_blueprint(home_blueprint)
+
+
+def load_apis(api: Api):
+    from .main import upload_resource
+    api.add_resource(upload_resource, "/upload")

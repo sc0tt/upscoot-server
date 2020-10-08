@@ -12,7 +12,6 @@ from .forms import UploadForm
 
 blueprint = Blueprint("home", __name__)
 
-
 @blueprint.route("/")
 def index():
     form = UploadForm()
@@ -128,7 +127,6 @@ def upload():
             if not form.private.data and redis_client.connection:
                 redis_client.publish(current_app.config["REDIS_CHANNEL"],
                                      url_for('home.uploaded_file', filename=file_name, _external=True))
-
             return redirect(url_for('home.uploaded_file', filename=file_name))
         return redirect(url_for('home.index'))
 
